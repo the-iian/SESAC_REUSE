@@ -22,3 +22,4 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/static/"); // 클래스패스 내의 정적 리소스 디렉토리를 지정
     }
 }
+

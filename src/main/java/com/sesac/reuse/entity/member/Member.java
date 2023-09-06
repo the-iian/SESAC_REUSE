@@ -24,7 +24,7 @@ public class Member extends BaseEntity {
     private String nickname;
 
     @Enumerated(EnumType.STRING)
-    @ElementCollection(fetch = FetchType.LAZY) //권한을 별도의 엔티티가 아닌 Member엔티티에서 관리하도록 하는 어노테이션, 간편용, 찐은 별도테이블 구성하는게 좋음
+    @ElementCollection(fetch = FetchType.LAZY)
     private Set<MemberRole> roleSet = new HashSet<>();
 
     private MEMBER_STATUS isActive; //탈퇴여부
@@ -62,8 +62,4 @@ public class Member extends BaseEntity {
     public void changePw(String encoedPw) {
         this.pw = encoedPw;
     }
-
-    @ManyToOne
-    @JoinColumn(name = "id")
-    private Member referencedMember;
 }

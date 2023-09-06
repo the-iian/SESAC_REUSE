@@ -65,4 +65,6 @@ public class CustomOAuth2MemberService extends DefaultOAuth2UserService {
                 attributes,  // OAuth2 인증 정보의 속성들
                 "email");  // 이름 필드의 키를 "email"로 설정합니다.
     }
+
+
 }

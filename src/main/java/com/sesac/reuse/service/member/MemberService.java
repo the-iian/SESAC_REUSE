@@ -13,5 +13,6 @@ public interface MemberService {
 
     public void modifyProfile(MemberDTO memberDTO);
     public boolean isExistAccount(String email);
+
     public void resetPwd(String email,String tempPw);
 }
